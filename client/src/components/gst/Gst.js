@@ -1,37 +1,31 @@
 import React from 'react'
-import './registration.css'
+import './gst.css'
 import gst from './images/gst.jpg'
 import apiData from './apidata/apidata';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import ChatIcon from '@mui/icons-material/Chat';
 import CallIcon from '@mui/icons-material/Call';
 import ViewCompactIcon from '@mui/icons-material/ViewCompact';
-function Registration() {
-    const style = {
+function Gst() {
 
-    }
     return (
-        <div className="registration-main">
+        <div className="gst-main">
 
-            <div className="registration-heading">
-                <h3>Registration</h3>
+            <div className="gst-heading">
+                <h3>GST</h3>
+                <div className="gst-h3-underline">
+
+                </div>
 
             </div>
-            <div className="resgistation">
+            <div className="gst">
 
                 <Item1 data={apiData[0]}></Item1>
                 <Item1 data={apiData[1]} type="reverse"></Item1>
-                <Item1 data={apiData[2]}></Item1>
-                <Item1 data={apiData[3]} type="reverse"></Item1>
-            </div>
-
-            <div className="registration-lower">
-                <Item2></Item2>
-                <Item3></Item3>
-                <Item4></Item4>
                 
-
             </div>
+
+          
 
 
         </div>
@@ -44,7 +38,7 @@ function Item1(props) {
 
     return (<>
 
-        <div className={`registration-item1 ${props.type === 'reverse' ? "items-reverse" : ""}`}>
+        <div className={`gst-item1 ${props.type === 'reverse' ? "items-reverse" : ""}`}>
             {
                 props.data ? (<>
                     <div className="item1-img">
@@ -68,8 +62,8 @@ function Item1(props) {
 
 function Item2(){
     return(<>
-         <div className="registration-lower-information">
-           <div className="registration-lower-information-top">
+         <div className="gst-lower-information">
+           <div className="gst-lower-information-top">
              <span><ViewCompactIcon></ViewCompactIcon></span>
              <h4>Special financing</h4>
              
@@ -81,8 +75,8 @@ function Item2(){
 
 function Item3(){
     return(<>
-         <div className="registration-lower-information">
-           <div className="registration-lower-information-top">
+         <div className="gst-lower-information">
+           <div className="gst-lower-information-top">
              <span><ChatIcon></ChatIcon></span>
              <h4>Chat with team</h4>
              
@@ -95,8 +89,8 @@ function Item3(){
 
 function Item4(){
     return(<>
-         <div className="registration-lower-information">
-           <div className="registration-lower-information-top">
+         <div className="gst-lower-information">
+           <div className="gst-lower-information-top">
              <span><CallIcon></CallIcon></span>
              <h4>Call a Specialist</h4>
              
@@ -105,4 +99,5 @@ function Item4(){
          </div>
     </>)
 }
-export default Registration
+export default Gst;
+export {Item1};

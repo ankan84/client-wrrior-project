@@ -1,15 +1,19 @@
 import React from 'react'
 import './App.css'
 import { HomeSlider } from './components/slider/HomeSlider'
-import Registration from './components/registation/Registration'
+import Gst from './components/gst/Gst'
+import Registration from './components/registration/Registration'
 
 function App() {
-   
-
   return (
     <>
-      <Registration></Registration>
+       {/* <Gst></Gst> */}
+         
         {/* <HomeSlider></HomeSlider>   */}
+
+        {/* <Registration></Registration> */}
+
+
 
     </>
   )
