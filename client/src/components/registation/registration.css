@@ -1,0 +1,154 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+
+.registration-main{
+
+    width: 100%;
+    height: 130rem;
+    background-color:#fafafa;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kanit', sans-serif;
+
+}
+
+.registration-heading{
+    margin-top: 4%;
+    width: 100%;
+    height: 100px;
+
+}
+
+.registration-heading h3{
+    text-align: center;
+    color: #130f40;
+    font-size: 40px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+
+.registration-main .resgistation{
+    width: 90%;
+  
+    height: auto;
+    margin-top: 5%;
+   
+
+    
+}
+
+.items-reverse{
+    /* border: 3px solid red; */
+    flex-direction: row-reverse;
+}
+.registration-item1 {
+    width:100%;
+    height: 400px;
+    background-color:#fff;
+    display: flex;
+    
+    overflow: hidden;
+
+    
+}
+
+.registration-item1 .item1-img {
+    height: 400px;
+    width: 50%;
+
+}
+.registration-item1 .item1-img img{
+    height: 400px;
+    width: 100%;
+    
+}
+
+.registration-item1 .item1-text-information{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    animation: ankan 0.5s;
+    
+    
+}
+.registration-item1 .item1-text-information .text{
+
+    height: 250px;
+    width: 500px;
+    /* background-color: rgb(202, 202, 33); */
+    
+    
+}
+
+.item1-text-information .text h4{
+    color:#130f40;
+
+
+}
+.item1-text-information .text button{
+    border: none;
+    background: none;
+    outline: none;
+    color: #130f40;
+
+    
+}
+
+
+.registration-lower{
+    width: 90%;
+    height: 200px;
+    margin-top: 3%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    
+    /* background-color:brown */
+}
+
+.registration-lower-information{
+    width: 320px;
+    height: 150px;
+    
+    /* background-color: blueviolet;  */
+
+}
+.registration-lower-information-top{
+    height: 30%;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    /* background-color: blue; */
+}
+.registration-lower-information h5{
+    font-size: 16px;
+    color: #130f40;
+
+}
+
+
+.registration-lower-information h4{
+    font-size: 23px;
+    color: #130f40;
+    font-weight: 600;
+}
+
+
+@keyframes ankan {
+    0%{
+        transform: translateX(150px);
+    }100%{
+        transform: translateX(0px);
+    }
+}
+
+
