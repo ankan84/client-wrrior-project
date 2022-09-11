@@ -73,8 +73,8 @@ const gst=new mongoose.Schema({
 })
 
 
-const registration=new mongoose.Schema({
-    name:{
+const gst_filling=new mongoose.Schema({
+    your_name:{
         type:String,
         required:true
     },
@@ -82,19 +82,19 @@ const registration=new mongoose.Schema({
         type:String,
         required:true
     },
-    email:{
-        type:String,
+    mob_number:{
+        type:Number,
         required:true   
     },
-    number:{
-        type:Number,
-        required:true
-    },
-    fname:{
+    email:{
         type:String,
         required:true
     },
-    pan_no:{
+    father_name:{
+        type:String,
+        required:true
+    },
+    pan_number:{
         type:String,
         required:true
     },
@@ -124,25 +124,26 @@ const registration=new mongoose.Schema({
     },
     loan_statement:{
         type:String,
+    
+    },
+    donation_receipt:{
+        type:String,
         
     },
-    donation:{
+    property:{
         type:String,
         required:true
-    },
-    any_properties:{
-        type:String,
-       
     },
     curr_address:{
         type:String,
-        required:true
+       
     },
     permanent_address:{
         type:String,
         required:true
     },
-    from16:{
+   
+    form_16:{
         type:String,
         required:true
     }
@@ -150,7 +151,7 @@ const registration=new mongoose.Schema({
 })
 
 const gst_data=mongoose.model('gstData',gst);
-const registration_data=mongoose.model('registrationData',registration)
+const gst_filling_data=mongoose.model('gst_filling',gst_filling)
 
-module.exports={gst_data,registration_data};
+module.exports={gst_data,gst_filling_data};
 
