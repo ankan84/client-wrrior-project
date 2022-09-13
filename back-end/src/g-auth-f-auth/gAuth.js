@@ -6,7 +6,9 @@ const user_data = require('../registration/authSchema');
 auth.post('/g_auth/login', async (req, res) => {
   
    const {name,email,g_token}=req.body; 
+
    try {
+      if(g_token){
    
       res.cookie("accessToken", g_token, {
          expiresIn: '2h',
@@ -14,7 +16,7 @@ auth.post('/g_auth/login', async (req, res) => {
      });
       let token_check = await user_data.findOne({g_token})
      
-     
+ 
      
       if (token_check && g_token != "") {
 
@@ -40,6 +42,9 @@ auth.post('/g_auth/login', async (req, res) => {
          }
 
       }
+   }else{
+      res.status(400).send()
+   }
       }catch(e){
         res.status(400).send("dsdj");
       }
@@ -52,9 +57,8 @@ auth.post('/g_auth/check_user', async (req, res) => {
       
       let token = await user_data.findOne({g_token:req.cookies.accessToken});
      
-   
 
-      if (token.g_token === req.cookies.accessToken) {
+      if (token.g_token === req.cookies.accessToken && req.cookies.accessToken!=undefined ) {
          res.status(200).send(token.name)
       } else {
          res.status(400).send();
